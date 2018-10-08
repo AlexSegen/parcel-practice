@@ -28,11 +28,10 @@ module.exports = users
 
 import axios from 'axios';
 
-const API = "http://localhost:3001";
 const RESOURCE_NAME = "/users";
 
 export default {
   getAll() {
-    return axios.get(API + RESOURCE_NAME);
+    return axios.get(process.env.API + RESOURCE_NAME);
   }
 };
