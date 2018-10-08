@@ -4,13 +4,13 @@ import usersService from '../services/users.service';
 
 Vue.component('user-list', {
   template: `<div>
-			  <p>Users list</p>
+			  <p class="text-center">Users list</p>
                 <ul class="list-group">
                   <i v-if="users.length < 1"> Users not found</i>
 				  <li v-else class="list-group-item" v-for="(user, key, index) in users">
-				  	User <strong>{{ user.first_name }}</strong> is 
+				  	<strong>{{ user.first_name }}</strong>  
 				  	<a href="javascript:void(0)"
-				  	class="badge"
+				  	class="badge float-right"
 				  	:class="user.isActive ? 'badge-success' : 'badge-secondary'"
 				  	v-text="user.isActive ? 'Active' : 'Inactive'"
 				  	@click="changeStatus(key)"></a>
