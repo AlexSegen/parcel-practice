@@ -5,7 +5,7 @@
       "first_name": "Trudie",
       "last_name": "Bullock",
       "email": "tbullock0@prweb.com",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": 2,
@@ -19,7 +19,7 @@
       "first_name": "Marlow",
       "last_name": "Cawkill",
       "email": "mcawkill2@aol.com",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 4,
@@ -33,7 +33,7 @@
       "first_name": "Bank",
       "last_name": "Liepmann",
       "email": "bliepmann4@google.com.au",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": 6,
@@ -47,28 +47,28 @@
       "first_name": "Nonah",
       "last_name": "Emtage",
       "email": "nemtage6@nifty.com",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 8,
       "first_name": "Devin",
       "last_name": "Castagne",
       "email": "dcastagne7@arstechnica.com",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 9,
       "first_name": "Celle",
       "last_name": "Reisenstein",
       "email": "creisenstein8@amazonaws.com",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 10,
       "first_name": "Bellina",
       "last_name": "Zavattiero",
       "email": "bzavattiero9@acquirethisname.com",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": 11,
@@ -89,7 +89,7 @@
       "first_name": "Demeter",
       "last_name": "Cheyenne",
       "email": "dcheyennec@com.com",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": 14,
@@ -103,7 +103,7 @@
       "first_name": "Star",
       "last_name": "Urry",
       "email": "surrye@admin.ch",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 16,
@@ -124,7 +124,7 @@
       "first_name": "Masha",
       "last_name": "Jeays",
       "email": "mjeaysh@tumblr.com",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": 19,
@@ -138,7 +138,7 @@
       "first_name": "Garwin",
       "last_name": "Gooddy",
       "email": "ggooddyj@admin.ch",
-      "isActive": false
+      "isActive": true
     }
   ]
 }
