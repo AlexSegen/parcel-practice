@@ -33,7 +33,7 @@
       "first_name": "Bank",
       "last_name": "Liepmann",
       "email": "bliepmann4@google.com.au",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": 6,

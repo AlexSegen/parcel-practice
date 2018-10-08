@@ -1,8 +1,8 @@
-import Vue from 'vue/dist/vue.esm'
+import Vue from "vue/dist/vue.esm";
 
-import usersService from '../services/users.service';
+import usersService from "../services/users.service";
 
-Vue.component('user-list', {
+Vue.component("user-list", {
   template: `<div>
 			  <p class="text-center">Users list</p>
                 <ul class="list-group">
@@ -17,31 +17,39 @@ Vue.component('user-list', {
 				  </li>
 				</ul>
 		 	</div>`,
-   props: ['users'],
-   methods:{
-	changeStatus: function(key){
-		this.users[key].isActive = !this.users[key].isActive
-	}
-   }
+  props: ["users"],
+  methods: {
+    changeStatus(key) {
+      this.users[key].isActive = !this.users[key].isActive;
+
+      let data = this.users[key];
+
+      usersService.updateStatus(data.id, data).then(response => {
+        this.$parent.getUsers();
+      });
+    }
+  }
 });
 
 var app = new Vue({
-	el: '#app',
-	components:{
-		//userList
-	},
-	data: {
-		message: 'Users app!',
-		users: []
-    },
-    created: function () {
-        this.getUsers();
-    },
-	methods:{
-        getUsers(){
-            usersService.getAll().then((response) => {
-                this.users = response.data;
-            });
-        }
+  el: "#app",
+  components: {
+    //userList
+  },
+  data() {
+    return {
+      message: "Users app!",
+      users: []
+    };
+  },
+  created() {
+    this.getUsers();
+  },
+  methods: {
+    getUsers() {
+      usersService.getAll().then(response => {
+        this.users = response.data;
+      });
     }
+  }
 });
