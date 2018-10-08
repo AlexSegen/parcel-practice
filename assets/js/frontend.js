@@ -1,10 +1,14 @@
 import Vue from 'vue/dist/vue.esm'
+
+import usersService from '../services/users.service';
+
 Vue.component('user-list', {
   template: `<div>
 			  <p>Users list</p>
-				<ul class="list-group">
-				  <li class="list-group-item" v-for="(user, key, index) in users">
-				  	User <strong>{{ user.name }}</strong> is 
+                <ul class="list-group">
+                  <i v-if="users.length < 1"> Users not found</i>
+				  <li v-else class="list-group-item" v-for="(user, key, index) in users">
+				  	User <strong>{{ user.first_name }}</strong> is 
 				  	<a href="javascript:void(0)"
 				  	class="badge"
 				  	:class="user.isActive ? 'badge-success' : 'badge-secondary'"
@@ -28,33 +32,16 @@ var app = new Vue({
 	},
 	data: {
 		message: 'Users app!',
-		users: [
-		{
-			id: 1,
-			name:'Alejandro',
-			isActive: 1
-		},
-		{
-			id: 2,
-			name:'Jose',
-			isActive: 1
-		},
-		{
-			id: 3,
-			name:'Daniel',
-			isActive: 0
-		},
-		{
-			id: 4,
-			name:'Luis',
-			isActive: 1
-		}
-		]
-	},
+		users: []
+    },
+    created: function () {
+        this.getUsers();
+    },
 	methods:{
-		// changeStatus: function(key){
-		// 	console.log(key)
-		// 	this.users[key].isActive = !this.users[key].isActive
-		// }
-	}
+        getUsers(){
+            usersService.getAll().then((response) => {
+                this.users = response.data;
+            });
+        }
+    }
 });

@@ -18,17 +18,18 @@ Trace:
 
 npm manifest: 
   {
-    "name": "parcel-sandbox",
+    "name": "parcel-practice",
     "version": "1.0.0",
-    "description": "Simple Parcel Sandbox",
+    "description": "Parcel Practice",
     "main": "index.html",
     "scripts": {
       "start": "parcel index.html --open",
-      "build": "parcel build index.html"
+      "build": "parcel build index.html --public-url ./"
     },
     "dependencies": {
       "@babel/preset-env": "^7.1.0",
       "autoprefixer": "^9.1.5",
+      "axios": "^0.18.0",
       "postcss-modules": "^1.4.1",
       "sass": "^1.14.1",
       "vue": "^2.5.17"
