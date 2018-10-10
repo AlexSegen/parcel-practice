@@ -4,7 +4,7 @@
   "description": "Parcel Practice",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel ./src/index.html --open",
     "build": "parcel build index.html --public-url ./"
   },
   "dependencies": {
